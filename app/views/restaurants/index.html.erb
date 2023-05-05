@@ -1,8 +1,45 @@
-<% @restaurants.each do |restaurant| %>
-  <h2><%= restaurant["name"]  %></h2>
-  <h3><%= restaurant["city"]  %></h3>
-  <h4><%= restaurant["address"] %></h4>
-  <p><%= restaurant["description"] %></p>
-  <%= image_tag(restaurant["photo_url"], class:"")%>
-  <%= link_to "ir al restaurante", restaurant_path(restaurant["id"])%>
-<% end %>
+
+<div class="hero-section">
+
+
+  <%= image_tag("https://images.unsplash.com/photo-1553527922-767df645c5f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80", class: "d-block w-100", style: "max-height: 500px; object-fit: cover;") %>
+
+</div>
+<div class="section-container">
+    <div class="section-discount">
+
+        <h2 class="discount-subtitle">Restaurants</h2>
+        <div>  <%= link_to "Create Restaurants", new_restaurant_path, class: "buy-btn" %></div>
+        <div><p></p></div>
+        <div class="discount-cocktails">
+
+          <% @restaurants.each do |restaurant| %>
+            <div class="card-discount">
+              <%= link_to restaurant_path(restaurant["id"]) do %>
+                  <%=image_tag(restaurant["photo_url"], class:"discount-cocktails")%>
+
+                  <div class="card-info-discount">
+                      <h2 class="subtitle"><%= restaurant["name"] %></h2>
+              <% end %>
+                      <h6 class="new-price" style= "color: var(--background-color-btn);"><%= restaurant["city"] %></h6>
+                      <h6 class="new-price" style= "color: var(--font-color-discount);"><%= restaurant["address"] %></h6>
+                  </div>
+            </div>
+          <% end %>
+        </div>
+    </div>
+
+
+
+    <div class="sponsor">
+        <marquee behavior="" direction="">
+            <div class="sponsor-carousel">
+              <% sponsors = %w(sponsor2 sponsor3 sponsor4 sponsor5 sponsor6 sponsor7 sponsor8 sponsor9 sponsor10 sponsor11 sponsor12 sponsor13 sponsor14 sponsor15 sponsor16 sponsor17 sponsor18 sponsor19) %>
+              <% sponsors.each do |sponsor| %>
+                <%= image_tag sponsor, class: "discount-cocktails" %>
+              <% end %>
+            </div>
+        </marquee>
+    </div>
+
+</div>

@@ -18,7 +18,7 @@ class RestaurantsController < ApplicationController
   # end
 
   def create
-    result = RestClient.post("http://localhost:3000/api/v1/restaurants", { 'name' => params["name"], 'description' => params["description"], 'address' => params["address"], 'city' => params["city"], 'photo_url' => params["photo_url"] }.to_json, {content_type: :json, accept: :json} )
+    result = RestClient.post("http://localhost:3001/api/v1/restaurants", { 'name' => params["name"], 'description' => params["description"], 'address' => params["address"], 'city' => params["city"], 'photo_url' => params["photo_url"] }.to_json, {content_type: :json, accept: :json} )
 
     if result.code == 201
       redirect_to restaurants_path
