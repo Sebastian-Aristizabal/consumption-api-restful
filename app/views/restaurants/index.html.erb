@@ -1,3 +1,8 @@
-<% @restaurants.each do |e| %>
-  <%= e["name"]  %>
+<% @restaurants.each do |restaurant| %>
+  <h2><%= restaurant["name"]  %></h2>
+  <h3><%= restaurant["city"]  %></h3>
+  <h4><%= restaurant["address"] %></h4>
+  <p><%= restaurant["description"] %></p>
+  <%= image_tag(restaurant["photo_url"], class:"")%>
+  <%= link_to "ir al restaurante", restaurant_path(restaurant["id"])%>
 <% end %>

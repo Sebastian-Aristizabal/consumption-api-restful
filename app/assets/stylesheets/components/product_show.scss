@@ -1,0 +1,74 @@
+.cocktail-show {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0px 100px 50px;
+  & > div {
+    margin: 0 30px;
+    }
+}
+
+.cocktail-image {
+  width: 450px;
+  height: 550px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.cocktail-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cocktail-info h1 {
+  font-size: 40px;
+  font-weight: 700;
+  margin: 0;
+}
+.cocktail-info h3 {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  color: #A1A1A1;
+}
+
+.cocktail-info1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+
+  span {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    color: #14213D;
+  }
+
+   span.status {
+    color: #FCA311;
+    background-color: #14213D;
+    padding: 2px;
+  }
+}
+
+.cocktail-info2 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 0;
+
+  span {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 0;
+    color: #14213D;
+  }
+
+   span.discount {
+    color: #FCA311;
+  }
+}

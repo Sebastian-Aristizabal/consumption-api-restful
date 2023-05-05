@@ -1,0 +1,23 @@
+.section-background{
+    background: linear-gradient( var(--background-opacity) 100%, rgba(0, 0, 0, 0.5)100%), url("background1.png");
+    /* background-position: cover; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    /* max-width: 1000px; */
+    height: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.section-background .saying{
+    max-width: 750px;
+}
+.section-background .saying .subtitle{
+    font-size: var(--subtitle);
+    color: var(--white);
+    font-weight: var(--medium);
+    justify-content: center;
+}

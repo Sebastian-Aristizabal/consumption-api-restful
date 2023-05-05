@@ -1,0 +1,64 @@
+.container-head .navbar .container .navbar-brand .logo{
+    width: 45%;
+    background-color: var(--background-color-btn);
+}
+.container-head .navbar{
+    background-color:var(--background-color-btn);
+}
+.container-head .navbar .container{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.container-head .navbar .container .search-section .btn{
+    font-size: var(--content);
+    font-weight: var(--medium);
+    padding: 0 25px;
+    color: var(--white);
+    border: 1px solid var(--white);
+    background-color:var(--background-color-btn-hover) ;
+    border: 1px solid var(--background-color-btn-hover);
+    transition: all .5s;
+}
+.container-head .navbar .container .search-section .btn:hover{
+    background-color:var(--white) ;
+    border: 1px solid var(--white);
+    color: var(--gray);
+}
+.container-head .navbar .container .collapse{
+    margin-left: 0px;
+}
+.container-head .navbar .container .collapse .navbar-nav .nav-item .shopping-cart, .login{
+    width: 25px;
+    transform: scale(100%, 100%);
+    transition: transform .5s;
+}
+.container-head .navbar .container .collapse .navbar-nav .nav-item .shopping-cart:hover{
+    transform: scale(110%, 110%);
+}
+.container-head .navbar .container .collapse .navbar-nav .nav-item .login:hover{
+    transform: scale(110%, 110%);
+}
+.container-head .menu{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+.container-head .menu ul.nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0px;
+}
+.container-head .menu .nav .nav-item > a.nav-link{
+    font-size: var(--content);
+    font-weight: var(--bold);
+    color: var( --background-color-btn);
+}
+
+.navbar i{
+  color: white;
+  font-size: 25px;
+}

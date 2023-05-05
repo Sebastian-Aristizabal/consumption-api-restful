@@ -1,0 +1,15 @@
+<% @reservations.each do |reservation| %>
+  <h2><%= reservation["group_size"]  %></h2>
+  <h3><%= reservation["booking_date"]  %></h3>
+  <h3><%= reservation["user_id"]  %></h3>
+  <h3><%= reservation["table_id"]  %></h3>
+  <%#= link_to "ir al reservation", reservation_path(reservation["id"])%>
+<% end %>
+    t.integer "group_size"
+    t.datetime "booking_date"
+    t.bigint "user_id", null: false
+    t.bigint "table_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["table_id"], name: "index_reservations_on_table_id"
+    t.index ["user_id"], name: "index_reservations_on_user_id"

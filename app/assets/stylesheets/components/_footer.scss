@@ -1,0 +1,99 @@
+.footer-container{
+    width:100%;
+    height:auto;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    background-color:var(--background-color);
+}
+.footer-container .column-footer{
+
+    display:flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 200px;
+    margin: 100px auto;
+}
+.footer-container .column-footer .navbar{
+    width:100px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+}
+.footer-container .column-footer .navbar .nav-item{
+    text-decoration: none;
+    padding: 5px 0 0 0;
+}
+.footer-container .column-footer .navbar .nav-item li{
+    font-size: var(--title-paragraph-card);
+    color: var(--gray);
+}
+.footer-container .column-footer .social-media{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    border-top: 1px solid var(--gray);
+    padding-top:5px ;
+}
+.footer-container .column-footer .social-media .social-item img.item{
+    transform: scale(100% , 100%);
+    transition: transform .5s;
+}
+.footer-container .column-footer .social-media .social-item img.item:hover{
+    transform: scale(105% , 105%);
+}
+.footer-container .column-footer .payments{
+    display: flex;
+    flex-direction: row;
+    border-top: 1px solid var(--gray);
+    padding-top:5px ;
+}
+.footer-container .column-footer .payments .item{
+    height: 30px;
+    margin: 0px 3px;
+    border-radius: 2px;
+    object-fit: cover;
+}
+.footer-container .info-developer{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-container .info-developer .developer{
+    font-size: 10px;
+}
+li{
+  list-style: none;
+}
+
+.social-media, .payments {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-media li, .payments li {
+  margin: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .social-media li, .payments li {
+  flex-basis: 50%;
+  }
+  }
+
+  @media only screen and (max-width: 500px) {
+  .social-media li, .payments li {
+  flex-basis: 100%;
+  }
+  }
+
+  @media only screen and (max-width: 320px) {
+  .social-media li, .payments li {
+  flex-basis: 100%;
+  text-align: center;
+  }
+  }

@@ -1,0 +1,19 @@
+<div class="cocktail-show">
+    <div>
+      <%=image_tag(@restaurant["photo_url"], class:"cocktail-image")%>
+    </div>
+
+    <div class="cocktail-info">
+        <h1><%= @restaurant["name"] %></h1>
+      <div class="cocktail-info1">
+        <h3>City: <span><%= @restaurant["city"] %></span></h3>
+        <h3>Address: <span><%= @restaurant["address"] %></span></h3>
+      </div>
+
+        <hr>
+      <div class="cocktail-info2">
+      </div>
+        <h2>Description:</h2>
+        <p><%= @restaurant["description"] %></p>
+    </div>
+</div>

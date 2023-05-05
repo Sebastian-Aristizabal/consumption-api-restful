@@ -1,10 +1,10 @@
-class RestaurantsController < ApplicationController
+class ReservationsController < ApplicationController
   require 'rest-client'
   require 'json'
 
   def index
-    result = RestClient.get("http://localhost:3001/api/v1/restaurants")
-    @restaurants = JSON.parse(result)
+    result = RestClient.get("http://localhost:3001/api/v1/restaurants/#{params[:id]}/reservations")
+    @reservations = JSON.parse(result)
   end
 
   def show
